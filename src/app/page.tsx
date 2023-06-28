@@ -10,10 +10,10 @@ export default function Home() {
             feel free to edit anything you like, use the team_collaboration
             branch and make a pull request in the github repo
           </p>
-          <p className="text-xl font-mono">happy coding!</p>
+          <p className="text-xl font-mono">Happy Coding!</p>
           <p className="text-xl font-mono">Hi, there!</p>
           <p>Let's get to work guys!</p>
-          <p className='text-xl font-mono'>
+          <p className="text-xl font-mono">
             Hi guy, I can't wait to work and learn more from you
           </p>
         </div>

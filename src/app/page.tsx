@@ -16,6 +16,7 @@ export default function Home() {
           <p className="text-xl font-mono">
             Hi guy, I can't wait to work and learn more from you
           </p>
+	  <p className="text-xl font-mono">Hey team!</p>
         </div>
       </div>
     </main>

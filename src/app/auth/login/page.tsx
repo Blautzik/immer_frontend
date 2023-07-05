@@ -40,12 +40,12 @@ const LoginPage = () => {
     //     <button type='submit' className='bg-brand-color rounded-lg w-[5rem] px-1 py-2' onClick={onSubmit}>Login</button>
     //   </div>
     // </div>
-    <div className="bg-white container">
-      <div className="flex  flex-col mx-auto max-w-[400px] justify-center bg-white h-screen px-6 py-10">
+    <div className="bg-white container ">
+      <div className="flex flex-col mx-auto max-w-[400px] justify-center bg-white h-screen px-6 py-10">
         <div>
           <img
             className="h-[65px] w-[64px] mx-auto"
-            src={Icon.src} alt="Icon" />
+            src={Icon.src} alt="immerIcon" />
           <img
             className="h-[40px] w-[120px] mx-auto"
             src={Logo.src} alt="Logo" />

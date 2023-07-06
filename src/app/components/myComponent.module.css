@@ -1,0 +1,7 @@
+.TrendingEventsContainer {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 1rem;
+  grid-auto-columns: 86%;
+  overflow-x: auto;
+}

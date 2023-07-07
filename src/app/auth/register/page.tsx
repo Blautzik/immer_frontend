@@ -10,7 +10,6 @@ import EmailIcon from '../../../../public/assets/sign-in icons/email.svg';
 import LockIcon from '../../../../public/assets/sign-in icons/Lock.svg';
 import OpenEye from '../../../../public/assets/sign-in icons/open-eye.png';
 import ClosedEye from '../../../../public/assets/sign-in icons/closed-eye.png';
-import Link from "next/link";
 
 // TODO change useref, use Formik for the login form. 
 // Github is configured to be accepted as a session provider, we can use it to test registering users without the database. later we will change the providers to google.
@@ -102,7 +101,7 @@ const LoginPage = () => {
             </label>
             <p className="text-black ml-4 text-sm">Remember me</p>
           </div>
-          <Link href="/" className="text-black text-sm">Forgot Password?</Link>
+          <a href="/" className="text-black text-sm">Forgot Password?</a>
         </div>
 
         {/* Sign in button  */}
@@ -128,7 +127,7 @@ const LoginPage = () => {
             </picture>
             <p className="text-black" >Login with Facebook</p>
           </button>
-          <p className="text-black text-[15px]">Don't have an account? <Link href="/" className="text-[#ff6c00] text-[15px]">Sign up</Link></p>
+          <p className="text-black text-[15px]">Don't have an account? <a href="/" className="text-[#ff6c00] text-[15px]">Sign up</a></p>
         </div>
       </div>
     </div>

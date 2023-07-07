@@ -2,7 +2,7 @@
 import { signIn } from "next-auth/react";
 import { useRef, useState } from "react";
 import './style.css'; // Import the custom CSS file
-import Icon from '../../../../public/assets/immer_icon_orange.svg';
+import Icon from '../../../../public/assets/immer logo_orange.svg';
 import Logo from '../../../../public/assets/immer logo.svg';
 import GoogleIcon from '../../../../public/assets/sign-in icons/google-icon.svg';
 import FbIcon from '../../../../public/assets/sign-in icons/facebook-icon.svg';

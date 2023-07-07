@@ -24,6 +24,7 @@ export default function CategoryList({categories,}: CategoriesListProps) {
     }}>
        {categories.map(cat => (
         <CategoryCard
+            key={cat.id}
             id={cat.id}
             img={cat.img}
             title={cat.title}

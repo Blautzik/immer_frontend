@@ -128,7 +128,7 @@ const LoginPage = () => {
             </picture>
             <p className="text-black" >Login with Facebook</p>
           </button>
-          <p className="text-black text-[15px]">Dont have an account? <Link href="/" className="text-[#ff6c00] text-[15px]">Sign up</Link></p>
+          <p className="text-black text-[15px]">Don't have an account? <Link href="/" className="text-[#ff6c00] text-[15px]">Sign up</Link></p>
         </div>
       </div>
     </div>

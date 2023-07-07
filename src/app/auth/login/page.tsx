@@ -55,12 +55,17 @@ const LoginPage = () => {
         {/* input fields */}
         <div className="flex flex-col gap-4">
           <div className="flex flex-row items-center border border-[#E4DFDF] focus:border-[#747688] outline-none rounded-[12px] text-[#747688] w-full px-4">
+            <picture>
             <img src={EmailIcon.src} alt="" />
+            </picture>
             <input onChange={(e) => (userName.current = e.target.value)}
               className="ml-4 py-4 outline-none w-full" placeholder="Username" />
           </div>
           <div className="flex flex-row items-center border border-[#E4DFDF] focus:border-[#747688] outline-none rounded-[12px] text-[#747688] w-full px-4">
+            <picture>
+
             <img src={LockIcon.src} alt="" />
+            </picture>
             <input type={showPassword ? "text" : "password"} onChange={(e) => (pass.current = e.target.value)} className="ml-4 py-4 outline-none w-full mr-3" placeholder='Password' />
 
             {/* Password visibility toggle button  */}
@@ -70,9 +75,13 @@ const LoginPage = () => {
               onClick={handleTogglePasswordVisibility}
             >
               {showPassword ? (
-                <img src={ClosedEye.src} alt="" className="h-[24px] w-[24px]" />
+                <picture>
+                  <img src={ClosedEye.src} alt="" className="h-[24px] w-[24px]" />
+                </picture>
               ) : (
-                <img src={OpenEye.src} alt="" className="h-[24px] w-[24px]" />
+                <picture>
+                  <img src={OpenEye.src} alt="" className="h-[24px] w-[24px]" />
+                </picture>
               )}
             </button>
           </div>
@@ -103,11 +112,15 @@ const LoginPage = () => {
         <div className="flex flex-col gap-3 items-center mt-4">
           <p className="text-[#747688]">OR</p>
           <button className="flex flex-row justify-center gap-7 p-3 shadow-md rounded w-[80%] cursor:pointer ">
+            <picture>
             <img src={GoogleIcon.src} alt="google icon" className="h-[26px] w-[26px]" />
+            </picture>
             <p className="text-black mr-4" >Login with Google</p>
           </button>
           <button className="flex flex-row justify-center gap-4 p-3 shadow-md rounded w-[80%] cursor:pointer ">
+            <picture>
             <img src={FbIcon.src} alt="google icon" className="h-[26px] w-[26px]" />
+            </picture>
             <p className="text-black" >Login with Facebook</p>
           </button>
           <p className="text-black text-[15px]">Don't have an account? <a href="/" className="text-[#ff6c00] text-[15px]">Sign up</a></p>

@@ -23,6 +23,7 @@ export default function EventCard({
   return (
     <div
       key={id}
+      
       className="flex-none w-[47%] md:w-1/3  bg-[url('/pic.jpg')] bg-no-repeat bg-cover  rounded-2xl mb-2 h-44 shadow-sm"
     >
       <Link href={`/spectator/${id}`}>

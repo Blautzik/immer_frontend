@@ -1,4 +1,8 @@
+import CategoryList from "../components/CategoryList";
+import EventBrowserHeader from "../components/EventBrowserHeader";
+import EventList from "../components/EventList";
 import TrendingEventList from "../components/TrendingEventList";
+
 
 type TrendingEventsProps = {
   id: string;
@@ -10,6 +14,35 @@ type TrendingEventsProps = {
   price: number;
 }[];
 
+type EventCategoriesProps = {
+  id: string;
+  img: string;
+  title: string;
+}[];
+
+const EventCategories: EventCategoriesProps = [
+  {id: '1',
+  img: '/assets/categories/1.jpeg',
+  title: 'Music'
+  },
+  {id:'2',
+  img: '/assets/categories/2.jpeg',
+  title: 'Comedy',
+  },
+  {id:'3',
+  img: '/assets/categories/3.jpeg',
+  title: 'Sports',
+  },
+  {id:'4',
+  img: '/assets/categories/4.jpeg',
+  title: 'Jazz',
+  },
+  {id:'5',
+  img: '/assets/categories/5.jpeg',
+  title: 'Food',
+  },
+]
+
 const initialEvents: TrendingEventsProps = [
   {
     day: 15,
@@ -18,7 +51,7 @@ const initialEvents: TrendingEventsProps = [
     subTitle: "11:30 AM, Sofi Stadium Concourse, Inglewood, CA",
     price: 45,
     status: true,
-    id: "8gh",
+    id: "8ghsdfgdfg",
   },
   {
     day: 31,
@@ -27,11 +60,11 @@ const initialEvents: TrendingEventsProps = [
     subTitle: "11:30 AM, Sofi Stadium Concourse, Inglewood, CA",
     price: 45,
     status: false,
-    id: "8gh",
+    id: "8gh78676",
   },
   {
     day: 10,
-    month: "august",
+    month: "aug",
     title: "Cooking Live with Sheryl Green",
     subTitle: "11:30 AM, Sofi Stadium Concourse, Inglewood, CA",
     price: 45,
@@ -44,7 +77,7 @@ const initialEvents: TrendingEventsProps = [
     title: "Cooking Live with Sheryl Green",
     subTitle: "11:30 AM, Sofi Stadium Concourse, Inglewood, CA",
     price: 45,
-    status: false,
+    status: true,
     id: "5555",
   },
   {
@@ -53,8 +86,8 @@ const initialEvents: TrendingEventsProps = [
     title: "Cooking Live with Sheryl Green",
     subTitle: "11:30 AM, Sofi Stadium Concourse, Inglewood, CA",
     price: 45,
-    status: false,
-    id: "8gh",
+    status: true,
+    id: "8gh345",
   },
 ];
 
@@ -64,31 +97,37 @@ const initialEvents: TrendingEventsProps = [
 
 export default async function Spectator() {
   const trendingEventsData = initialEvents;
+  const categories =  EventCategories
 
   const filteredEvents = trendingEventsData.filter(
     (trending) => trending.status === true
   );
-  
+
   return (
-    <main className="min-h-screen items-center justify-center bg-white">
-      <header className="flex flex-row w-full justify-between items-center p-4 pl-8 pr-8 bg-primary">
-        <div className=" text-center p-1">
-          <h1>Back</h1>
-        </div>
-        <div className="text-center p-1">
-          <h1>Location</h1>
-        </div>
-        <div className=" text-center p-1">
-          <h1>Alert</h1>
-        </div>
-      </header>
-      <div className="pt-8 pl-8 pb-8">
-        <h1 className="text-black text-base font-style-normal font-bold mb-3">
+    <main className="min-h-screen items-center justify-center text-black bg-white">
+       
+        <EventBrowserHeader />
+      
+      <div className="pt-5 pl-8 pb-8">
+        <h1 className="text-black font-bold text-md">
           Trending Events near you
         </h1>
         <div className="items-center justify-center md:pr-8 w-full">
           <TrendingEventList filteredEvents={filteredEvents} />
         </div>
+        <h2 className="text-black font-bold text-md mt-0 pb-2">
+          Category
+        </h2>
+        <div className="items-center justify-center md:pr-8 w-full">
+          <CategoryList categories={categories} />
+        </div>
+        <h2 className="text-black font-bold text-md pt-4 pb-2">
+          Upcoming Events
+        </h2>
+        <div className="items-center justify-center md:pr-8 w-full">
+          <EventList events={initialEvents} /> 
+        </div>
+
       </div>
     </main>
   );

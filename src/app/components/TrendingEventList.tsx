@@ -1,4 +1,4 @@
-import EventCard from "./Eventcard";
+import TrendingEventCard from "./TrendingEventcard";
 
 type TrendingEventsProps = {
   id: string;
@@ -18,9 +18,9 @@ export default function TrendingEventList({
   filteredEvents,
 }: TrendingEventListProps) {
   return (
-    <div className="flex flex-nowrap gap-5 overflow-x-auto pt-2 pb-3 pl-1 scrolling-touch items-start mb-8 pr-2 w-full">
+    <div className="flex flex-nowrap gap-5 overflow-x-auto pt-2 pb-3 pl-1 items-start mb-6 pr-2 w-full">
       {filteredEvents.map((myevent) => (
-        <EventCard
+        <TrendingEventCard
           id={myevent.id}
           day={myevent.day}
           month={myevent.month}

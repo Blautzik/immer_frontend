@@ -43,12 +43,16 @@ const LoginPage = () => {
     <div className="bg-white container ">
       <div className="flex flex-col mx-auto max-w-[400px] justify-center bg-white h-screen px-6 py-10">
         <div>
+          <picture>
           <img
             className="h-[65px] w-[64px] mx-auto"
             src={Icon.src} alt="immerIcon" />
+          </picture>
+          <picture>
           <img
             className="h-[40px] w-[120px] mx-auto"
             src={Logo.src} alt="Logo" />
+          </picture>
         </div>
         <h3 className="text-base font-semibold text-[#120D26] mb-4">Sign in</h3>
 

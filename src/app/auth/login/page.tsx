@@ -2,18 +2,16 @@
 import { signIn } from "next-auth/react";
 import { useRef, useState } from "react";
 import './style.css'; // Import the custom CSS file
-import Icon from '../../../../public/assets/immer icon_orange.svg';
-import Logo from '../../../../public/assets/immer logo.svg';
-// import GoogleIcon from '../../../../public/assets/sign-in-icons/google-icon.svg';
-// import FbIcon from '../../../../public/assets/sign-in-icons/facebook-icon.svg';
+// icons
 import EmailIcon from '../../../../public/assets/sign-in-icons/email.svg';
 import LockIcon from '../../../../public/assets/sign-in-icons/Lock.svg';
 import OpenEye from '../../../../public/assets/sign-in-icons/open-eye.png';
 import ClosedEye from '../../../../public/assets/sign-in-icons/closed-eye.png';
 // components
-import Button from "@/app/components/Button";
+import SigninLogo from "@/app/components/SigninLogo";
 import Toggle from "@/app/components/toggle/Toggle";
-import LogInWithButton from "@/app/components/LogInWithButton";
+import SigninButton from "@/app/components/Buttons/SigninButton";
+import SigninOptions from "@/app/components/SigninOptions";
 
 // TODO change useref, use Formik for the login form. 
 // Github is configured to be accepted as a session provider, we can use it to test registering users without the database. later we will change the providers to google.
@@ -38,14 +36,7 @@ const LoginPage = () => {
   return (
     <div className="bg-white container ">
       <div className="flex flex-col mx-auto max-w-[400px] justify-center bg-white h-screen px-6 py-10">
-        <div>
-          <img
-            className="h-[65px] w-[64px] mx-auto"
-            src={Icon.src} alt="immerIcon" />
-          <img
-            className="h-[40px] w-[120px] mx-auto"
-            src={Logo.src} alt="Logo" />
-        </div>
+        <SigninLogo />
         <h3 className="text-base font-semibold text-[#120D26] mb-4">Sign in</h3>
 
         {/* input fields */}
@@ -82,21 +73,15 @@ const LoginPage = () => {
         </div>
 
         {/* Sign in button  */}
-        <Button
+        <SigninButton
           variant="primary"
           type='submit'
           onClick={onSubmit} >
           SIGN IN
-        </Button>
+        </SigninButton>
 
         {/* sign in options */}
-        <div className="flex flex-col gap-3 items-center mt-4">
-          <p className="text-[#747688]">OR</p>
-          <LogInWithButton buttonText="Login with Google" variant="google" />
-          <LogInWithButton buttonText="Login with Facebook" variant="facebook" />
-          <p className="text-black text-[15px]">Don't have an account? <a href="/" className="text-[#ff6c00] text-[15px]">Sign up</a></p>
-        </div>
-
+        <SigninOptions />
       </div>
     </div>
   );

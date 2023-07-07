@@ -12,7 +12,7 @@ type EventsCardProps = {
 
 import Image from "next/image";
 
-export default function EventCard({
+export default function TrendingEventCard({
   id,
   day,
   month,

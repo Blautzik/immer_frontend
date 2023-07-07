@@ -33,14 +33,7 @@ const LoginPage = () => {
     });
   };
   return (
-    // <div className='flex items-center justify-center h-screen'>
-    //   <div className="px-7 py-4 shadow bg-white rounded-md flex flex-col gap-2 items-center text-black">
-    //     <input onChange={(e) => (userName.current = e.target.value)} className="border-b-2 mb-4" placeholder="Username" />
-    //     <input type={"password"} onChange={(e) => (pass.current = e.target.value)} className="border-b-2 mb-4" placeholder='Password' />
 
-    //     <button type='submit' className='bg-brand-color rounded-lg w-[5rem] px-1 py-2' onClick={onSubmit}>Login</button>
-    //   </div>
-    // </div>
     <div className="bg-white container ">
       <div className="flex flex-col mx-auto max-w-[400px] justify-center bg-white h-screen px-6 py-10">
         <div>
@@ -71,7 +64,7 @@ const LoginPage = () => {
 
             <img src={LockIcon.src} alt="" />
             </picture>
-            <input type={showPassword ? "text" : "password"} onChange={(e) => (pass.current = e.target.value)} className="ml-4 py-4 outline-none w-full mr-3" placeholder='Password' />
+            <input type={showPassword ? "text" : "password"} onChange={(e) => (pass.current = e.target.value)} className="ml-4 py-4 outline-none w-full mr-3" placeholder="Password" />
 
             {/* Password visibility toggle button  */}
             <button

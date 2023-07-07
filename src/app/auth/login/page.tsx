@@ -2,16 +2,18 @@
 import { signIn } from "next-auth/react";
 import { useRef, useState } from "react";
 import './style.css'; // Import the custom CSS file
-// icons
+import Icon from '../../../../public/assets/immer icon_orange.svg';
+import Logo from '../../../../public/assets/immer logo.svg';
+// import GoogleIcon from '../../../../public/assets/sign-in-icons/google-icon.svg';
+// import FbIcon from '../../../../public/assets/sign-in-icons/facebook-icon.svg';
 import EmailIcon from '../../../../public/assets/sign-in-icons/email.svg';
 import LockIcon from '../../../../public/assets/sign-in-icons/Lock.svg';
 import OpenEye from '../../../../public/assets/sign-in-icons/open-eye.png';
 import ClosedEye from '../../../../public/assets/sign-in-icons/closed-eye.png';
 // components
-import SigninLogo from "@/app/components/SigninLogo";
+import Button from "@/app/components/Button";
 import Toggle from "@/app/components/toggle/Toggle";
-import SigninButton from "@/app/components/Buttons/SigninButton";
-import SigninOptions from "@/app/components/SigninOptions";
+import LogInWithButton from "@/app/components/LogInWithButton";
 
 // TODO change useref, use Formik for the login form. 
 // Github is configured to be accepted as a session provider, we can use it to test registering users without the database. later we will change the providers to google.
@@ -73,15 +75,21 @@ const LoginPage = () => {
         </div>
 
         {/* Sign in button  */}
-        <SigninButton
+        <Button
           variant="primary"
           type='submit'
           onClick={onSubmit} >
           SIGN IN
-        </SigninButton>
+        </Button>
 
         {/* sign in options */}
-        <SigninOptions />
+        <div className="flex flex-col gap-3 items-center mt-4">
+          <p className="text-[#747688]">OR</p>
+          <LogInWithButton buttonText="Login with Google" variant="google" />
+          <LogInWithButton buttonText="Login with Facebook" variant="facebook" />
+          <p className="text-black text-[15px]">Don't have an account? <a href="/" className="text-[#ff6c00] text-[15px]">Sign up</a></p>
+        </div>
+
       </div>
     </div>
   );

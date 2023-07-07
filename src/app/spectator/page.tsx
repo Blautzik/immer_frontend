@@ -1,7 +1,8 @@
-import TrendingEventsCard from "../components/trendingCard";
+import TrendingEventList from "../components/TrendingEventList";
 
 type TrendingEventsProps = {
   id: string;
+  status: boolean;
   day: number;
   month: string;
   title: string;
@@ -16,14 +17,16 @@ const initialEvents: TrendingEventsProps = [
     title: "Cooking Live with Sheryl Green",
     subTitle: "11:30 AM, Sofi Stadium Concourse, Inglewood, CA",
     price: 45,
+    status: true,
     id: "8gh",
   },
   {
     day: 31,
-    month: "december",
+    month: "july",
     title: "Cooking Live with Sheryl Green",
     subTitle: "11:30 AM, Sofi Stadium Concourse, Inglewood, CA",
     price: 45,
+    status: false,
     id: "8gh",
   },
   {
@@ -32,7 +35,8 @@ const initialEvents: TrendingEventsProps = [
     title: "Cooking Live with Sheryl Green",
     subTitle: "11:30 AM, Sofi Stadium Concourse, Inglewood, CA",
     price: 45,
-    id: "8gh",
+    status: true,
+    id: "8777gh",
   },
   {
     day: 10,
@@ -40,7 +44,8 @@ const initialEvents: TrendingEventsProps = [
     title: "Cooking Live with Sheryl Green",
     subTitle: "11:30 AM, Sofi Stadium Concourse, Inglewood, CA",
     price: 45,
-    id: "8gh",
+    status: false,
+    id: "5555",
   },
   {
     day: 10,
@@ -48,6 +53,7 @@ const initialEvents: TrendingEventsProps = [
     title: "Cooking Live with Sheryl Green",
     subTitle: "11:30 AM, Sofi Stadium Concourse, Inglewood, CA",
     price: 45,
+    status: false,
     id: "8gh",
   },
 ];
@@ -58,15 +64,11 @@ const initialEvents: TrendingEventsProps = [
 
 export default async function Spectator() {
   const trendingEventsData = initialEvents;
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 1000,
-  };
+
+  const filteredEvents = trendingEventsData.filter(
+    (trending) => trending.status === true
+  );
+  
   return (
     <main className="min-h-screen items-center justify-center bg-white">
       <header className="flex flex-row w-full justify-between items-center p-4 pl-8 pr-8 bg-primary">
@@ -85,19 +87,7 @@ export default async function Spectator() {
           Trending Events near you
         </h1>
         <div className="items-center justify-center md:pr-8 w-full">
-          <div className="flex flex-nowrap gap-5 overflow-x-scroll scrolling-touch items-start mb-8 w-full">
-            {trendingEventsData.map((myevent) => (
-              <TrendingEventsCard
-                id={myevent.id}
-                day={myevent.day}
-                month={myevent.month}
-                title={myevent.title}
-                subTitle={myevent.subTitle}
-                price={myevent.price}
-                key={myevent.id}
-              />
-            ))}
-          </div>
+          <TrendingEventList filteredEvents={filteredEvents} />
         </div>
       </div>
     </main>

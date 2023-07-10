@@ -29,7 +29,7 @@ const LoginPage = () => {
       username: userName.current,
       password: pass.current,
       redirect: true,
-      callbackUrl: "/",
+      callbackUrl: "/spectator",
     });
   };
   return (

@@ -27,7 +27,7 @@ export default function TrendingEventCard({
     >
       <Link href={`/spectator/${id}`}>
         <div className="flex flex-col  w-full rounded-2xl  ">
-          <div className="flex flex-row h-40 justify-between   pl-3 pr-3 pt-4">
+          <div className="flex flex-row h-40 justify-between pl-3 pr-3 pt-4">
             <div
               id="date-item"
               className="flex flex-col justify-center items-center h-12 w-12 p-3 bg-white bg-opacity-80 rounded-xl"

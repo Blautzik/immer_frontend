@@ -18,17 +18,16 @@ export default function EventCard({
   title,
   subTitle,
   price,
-  status
+  status,
 }: EventsCardProps) {
   return (
     <div
       key={id}
-      
       className="flex-none w-[47%] md:w-1/3  bg-[url('/pic.jpg')] bg-no-repeat bg-cover  rounded-2xl mb-2 h-44 shadow-sm"
     >
       <Link href={`/spectator/${id}`}>
         <div className="flex flex-col  w-full rounded-2xl  ">
-          <div className="flex flex-row h-32 justify-between   pl-3 pr-3 pt-4">
+          <div className="flex flex-row h-32 justify-between pl-3 pr-3 pt-4">
             <div
               id="date-item"
               className="flex flex-col justify-center items-center h-12 w-12 p-3 bg-white bg-opacity-80 rounded-xl"
@@ -40,18 +39,19 @@ export default function EventCard({
                 {month}
               </p>
             </div>
-            { status && <div
+            {status && (
+              <div
                 id="icon-item"
-              className="bg-gray-700 bg-opacity-75 h-7 w-7 rounded-2xl p-1 border-solid border-2 border-primary"
-            >
-              <Image
-                src="/vector-fire.svg"
-                width={18}
-                height={18}
-                alt="vector-fire"
+                className="bg-gray-700 bg-opacity-75 h-7 w-7 rounded-2xl p-1 border-solid border-2 border-primary"
+              >
+                <Image
+                  src="/vector-fire.svg"
+                  width={18}
+                  height={18}
+                  alt="vector-fire"
                 />
-            </div>
-            }
+              </div>
+            )}
           </div>
           <div
             className="flex flex-row h-16 bg-white w-full justify-between pl-3 pr-3 pt-3 inset-y-0 shadow-sm"
@@ -65,10 +65,11 @@ export default function EventCard({
                   whiteSpace: "nowrap",
                   overflow: "hidden",
                   textOverflow: "ellipsis",
-                  fontSize:'15px',
-                  fontWeight:'600',
+                  fontSize: "12px",
+                  lineHeight: "16px",
+                  fontStyle: "normal",
                 }}
-                className="text-md text-black font-semibold mt-1"
+                className="text-black font-semibold mt-1"
               >
                 {title}
               </p>
@@ -77,17 +78,18 @@ export default function EventCard({
                   whiteSpace: "nowrap",
                   overflow: "hidden",
                   textOverflow: "ellipsis",
-                  fontSize:'9px',
-                  fontWeight:'600',
-                  color:'#8d8d8d'
+                  fontSize: "10px",
+                  fontWeight: "500",
+                  lineHeight: "16px",
+                  color: "#8F8F8F",
                 }}
                 className="text-trending_subtext  font-semibold"
               >
                 {subTitle}
               </p>
             </div>
-            <div className="pr-2 pl-2  h-12 justify-end">
-              <p className="text-primary mt-2 text-xl text-end font-semibold">
+            <div className="pr-1 pl-2  h-12 justify-end">
+              <p className="text-primary mt-5 text-end font-semibold text-xs md:text-lg">
                 ${price}
               </p>
             </div>

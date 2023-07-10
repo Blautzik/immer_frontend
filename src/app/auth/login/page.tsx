@@ -1,7 +1,6 @@
 "use client";
 import { signIn } from "next-auth/react";
 import { useRef, useState } from "react";
-import './style.css'; // Import the custom CSS file
 // icons
 import EmailIcon from '../../../../public/assets/sign-in-icons/email.svg';
 import LockIcon from '../../../../public/assets/sign-in-icons/Lock.svg';

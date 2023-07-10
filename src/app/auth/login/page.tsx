@@ -34,7 +34,7 @@ const LoginPage = () => {
     });
   };
   return (
-    <div className="bg-white container ">
+    <div className="bg-white w-full">
       <div className="flex flex-col mx-auto max-w-[400px] justify-center bg-white h-screen px-6 py-10">
         <SigninLogo />
         <h3 className="text-base font-semibold text-[#120D26] mb-4">Sign in</h3>
@@ -64,6 +64,8 @@ const LoginPage = () => {
             </button>
           </div>
         </div>
+
+        {/* forgot password */}
         <div className="flex flex-row justify-between my-4">
           <div className="flex flex-row">
             <Toggle />

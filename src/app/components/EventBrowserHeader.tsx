@@ -29,7 +29,7 @@ const EventBrowserHeader = () => {
               setSelectedLocation(e.target.value);
             }}
           >
-            <option hidden defaultChecked>
+            <option hidden>
               Current Location
             </option>
             <option className="mt-8" value={"London"}>

@@ -7,6 +7,7 @@ type EventsCardProps = {
   title: string;
   subTitle: string;
   price: number;
+  img: string;
 };
 
 import Image from "next/image";
@@ -19,11 +20,13 @@ export default function EventCard({
   subTitle,
   price,
   status,
+  img,
 }: EventsCardProps) {
   return (
     <div
       key={id}
-      className="flex-none w-[47%] md:w-1/3  bg-[url('/pic.jpg')] bg-no-repeat bg-cover  rounded-2xl mb-2 h-44 shadow-sm"
+      style={{ backgroundImage: `url(${img})` }}
+      className="flex-none w-[47%] md:w-1/3 bg-no-repeat bg-cover  rounded-2xl mb-2 h-44 shadow-md"
     >
       <Link href={`/spectator/${id}`}>
         <div className="flex flex-col  w-full rounded-2xl  ">

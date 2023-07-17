@@ -8,6 +8,7 @@ type TrendingEventsProps = {
   title: string;
   subTitle: string;
   price: number;
+  img: string;
 }[];
 
 type TrendingEventListProps = {
@@ -27,6 +28,7 @@ export default function TrendingEventList({
           title={myevent.title}
           subTitle={myevent.subTitle}
           price={myevent.price}
+          img={myevent.img}
           key={myevent.id}
         />
       ))}

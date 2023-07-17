@@ -8,6 +8,7 @@ type EventsCardProps = {
   title: string;
   subTitle: string;
   price: number;
+  img: string;
 };
 
 import Image from "next/image";
@@ -19,11 +20,13 @@ export default function TrendingEventCard({
   title,
   subTitle,
   price,
+  img,
 }: EventsCardProps) {
   return (
     <div
       key={id}
-      className="flex-none w-11/12 md:w-1/3  bg-[url('/pic.jpg')] bg-no-repeat bg-cover  rounded-2xl mb-2 h-52 shadow-sm"
+      style={{ backgroundImage: `url(${img})` }}
+      className="flex-none w-11/12 md:w-1/3 bg-no-repeat bg-cover  rounded-2xl mb-2 h-52 shadow-sm"
     >
       <Link href={`/spectator/${id}`}>
         <div className="flex flex-col  w-full rounded-2xl  ">
@@ -63,8 +66,8 @@ export default function TrendingEventCard({
                   whiteSpace: "nowrap",
                   overflow: "hidden",
                   textOverflow: "ellipsis",
-                  fontSize:'15px',
-                  fontWeight:'600',
+                  fontSize: "15px",
+                  fontWeight: "600",
                 }}
                 className="text-md text-black font-semibold mt-1"
               >
@@ -75,9 +78,9 @@ export default function TrendingEventCard({
                   whiteSpace: "nowrap",
                   overflow: "hidden",
                   textOverflow: "ellipsis",
-                  fontSize:'9px',
-                  fontWeight:'600',
-                  color:'#8d8d8d'
+                  fontSize: "9px",
+                  fontWeight: "600",
+                  color: "#8d8d8d",
                 }}
                 className="text-trending_subtext  font-semibold"
               >

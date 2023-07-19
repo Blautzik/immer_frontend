@@ -109,7 +109,7 @@ const recommendedEvents: RecommendedEventsProps = [
     day: 10,
     month: "JUNE",
     title: "Cooking Live with Sheryl Green",
-    subTitle: "11:30 AM, Sofi Stadium Concourse, Inglewood, CA",
+    subTitle: "11:30 AM, sofi Stadium Concourse, Inglewood, CA",
     price: 45,
     status: true,
     id: "5555",

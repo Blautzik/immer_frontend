@@ -7,7 +7,10 @@ const EventBrowserHeader = () => {
   const [selectedLocation, setSelectedLocation] = useState("Los Angeles,CA");
 
   return (
-    <header className="flex flex-row w-full justify-between items-center fixed z-20 top-0 left-0  pl-5 pr-5 pt-4 bg-primary text-white">
+    <header
+      className="flex flex-row w-full justify-between items-center
+     fixed z-20 top-0 left-0  pl-5 pr-5 pt-4 bg-primary text-white"
+    >
       <div className="text-center p-1">
         <BsSearch />
       </div>

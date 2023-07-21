@@ -1,3 +1,4 @@
+import BookingButton from "../components/Buttons/BookingButton";
 import EventBookingHeader from "../components/EventBookings/EventBookingHeader";
 import EventBookingShare from "../components/EventBookings/EventBookingShare";
 import EventBookingDetailsCard from "../components/EventBookings/EventBookingsDetails";
@@ -169,6 +170,9 @@ export default function SpectatorBookingPage() {
       <section id="events recommended" className="p-5">
         <EventList events={eventsRecommended} />
       </section>
+      <div className="flex justify-center">
+        <BookingButton btnName="BOOK NOW" />
+      </div>
     </div>
   );
 }

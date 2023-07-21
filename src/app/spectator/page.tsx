@@ -104,7 +104,7 @@ export default async function Spectator() {
        
         <EventBrowserHeader />
       
-      <div className="p-5">
+      <div className="p-5 mt-14">
         <h1 className="text-black font-bold text-md">
           Trending Events near you
         </h1>

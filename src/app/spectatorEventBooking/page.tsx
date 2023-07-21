@@ -50,7 +50,7 @@ const EventBooking: EventBookingProps = [
     hostName: "Richard Wallace",
     datePosted: "30 Oct, 2023",
     aboutDetails:
-      "Richard Wallace is an American comedian and actor. Originally known as a stand-up comedian.",
+      "Richard Wallace is an American comedian and actor.Originally known as a stand-up comedian.",
   },
 ];
 

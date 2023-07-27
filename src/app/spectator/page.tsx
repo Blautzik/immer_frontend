@@ -12,6 +12,7 @@ type TrendingEventsProps = {
   title: string;
   subTitle: string;
   price: number;
+  img: string;
 }[];
 
 type EventCategoriesProps = {
@@ -51,7 +52,8 @@ const initialEvents: TrendingEventsProps = [
     subTitle: "11:30 AM, Sofi Stadium Concourse, Inglewood, CA",
     price: 45,
     status: true,
-    id: "8ghsdfgdfg",
+    id: "8k88",
+    img: "/assets/events-card-img/event-1.jpg",
   },
   {
     day: 31,
@@ -61,6 +63,7 @@ const initialEvents: TrendingEventsProps = [
     price: 45,
     status: false,
     id: "8gh78676",
+    img: "/assets/events-card-img/event-2.jpg",
   },
   {
     day: 10,
@@ -70,6 +73,7 @@ const initialEvents: TrendingEventsProps = [
     price: 45,
     status: true,
     id: "8777gh",
+    img: "/assets/events-card-img/event-3.jpg",
   },
   {
     day: 10,
@@ -79,15 +83,7 @@ const initialEvents: TrendingEventsProps = [
     price: 45,
     status: true,
     id: "5555",
-  },
-  {
-    day: 10,
-    month: "JUNE",
-    title: "Cooking Live with Sheryl Green",
-    subTitle: "11:30 AM, Sofi Stadium Concourse, Inglewood, CA",
-    price: 45,
-    status: true,
-    id: "8gh345",
+    img: "/assets/events-card-img/event-4.jpg",
   },
 ];
 
@@ -108,7 +104,7 @@ export default async function Spectator() {
        
         <EventBrowserHeader />
       
-      <div className="pt-5 pl-8 pb-8">
+      <div className="p-5 mt-14">
         <h1 className="text-black font-bold text-md">
           Trending Events near you
         </h1>

@@ -12,7 +12,7 @@ type EventsCardProps = {
 
 import Image from "next/image";
 
-export default function EventCard({
+export default function TrendingEventCard({
   id,
   day,
   month,
@@ -23,25 +23,25 @@ export default function EventCard({
   return (
     <div
       key={id}
-      className="flex-none w-11/12 md:w-1/3  bg-[url('/pic.jpg')] bg-no-repeat bg-cover  rounded-2xl mb-2 h-52"
+      className="flex-none w-11/12 md:w-1/3  bg-[url('/pic.jpg')] bg-no-repeat bg-cover  rounded-2xl mb-2 h-52 shadow-sm"
     >
       <Link href={`/spectator/${id}`}>
         <div className="flex flex-col  w-full rounded-2xl  ">
-          <div className="flex flex-row h-40 justify-between   pl-3 pr-3 pt-4">
+          <div className="flex flex-row h-40 justify-between pl-3 pr-3 pt-4">
             <div
               id="date-item"
-              className="flex flex-col justify-center items-center h-12 w-fit p-3 bg-secondary rounded-xl"
+              className="flex flex-col justify-center items-center h-12 w-12 p-3 bg-white bg-opacity-80 rounded-xl"
             >
-              <p className="text-sm text-primary  uppercase font-normal text-center">
+              <p className="text-md text-primary  uppercase font-normal text-center ">
                 {day}
               </p>
-              <p className="text-sm text-primary uppercase font-normal text-center">
+              <p className="text-xs text-primary uppercase font-bold text-center ">
                 {month}
               </p>
             </div>
             <div
               id="icon-item"
-              className="bg-transparent h-7 w-7 rounded-2xl p-1 border-solid border-2 border-primary"
+              className="bg-gray-700 bg-opacity-75 h-7 w-7 rounded-2xl p-1 border-solid border-2 border-primary"
             >
               <Image
                 src="/vector-fire.svg"
@@ -52,7 +52,7 @@ export default function EventCard({
             </div>
           </div>
           <div
-            className="flex flex-row h-16 bg-white w-full justify-between pl-3 pr-3 pt-3 inset-y-0 shadow-md"
+            className="flex flex-row h-16 bg-white w-full justify-between pl-3 pr-3 pt-3 inset-y-0 shadow-sm"
             style={{
               borderRadius: "0px 0px 15px 15px",
             }}
@@ -63,8 +63,10 @@ export default function EventCard({
                   whiteSpace: "nowrap",
                   overflow: "hidden",
                   textOverflow: "ellipsis",
+                  fontSize:'15px',
+                  fontWeight:'600',
                 }}
-                className="text-sm text-black font-semibold mt-1"
+                className="text-md text-black font-semibold mt-1"
               >
                 {title}
               </p>
@@ -73,8 +75,11 @@ export default function EventCard({
                   whiteSpace: "nowrap",
                   overflow: "hidden",
                   textOverflow: "ellipsis",
+                  fontSize:'9px',
+                  fontWeight:'600',
+                  color:'#8d8d8d'
                 }}
-                className="text-xs text-trending_subtext  mt-1 font-semibold"
+                className="text-trending_subtext  font-semibold"
               >
                 {subTitle}
               </p>
